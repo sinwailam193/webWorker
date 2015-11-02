@@ -84,13 +84,10 @@ function drawRow(workerResults) {
         if (values[i] < 0) {
             pixelData[red] = pixelData[green] = pixelData[blue] = 0;
         } else {
-          function getRandomArbitrary(min, max) {
-              return Math.random() * (max - min) + min;
-          }
-
-          pixelData[red] = 100;
-          pixelData[green] = 1000
-          pixelData[blue] = 10000
+          var color = this.palette[values[i]];
+          pixelData[red] = 15;
+          pixelData[green] = color[1];
+          pixelData[blue] = color[2];
         }
     }
   //
